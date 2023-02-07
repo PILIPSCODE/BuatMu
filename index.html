@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css">
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+    
+        body {
+          background-image: url('./bg.jpg');
+          background-size: cover;
+          overflow: hidden;
+          background-repeat: no-repeat;
+          background-position: center;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: white;
+          margin: 0;
+          padding: 0;
+        }
+    
+        swiper-container {
+          width: 100%;
+          height: 40%;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+        }
+        swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: rgba(1, 1, 1, 0.6);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        
+        .hearto {
+	font-size: 30px;
+	color: #e00;
+    margin-left: 5px;
+	animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+.text{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.bg_heart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+ }
+
+.heart {
+    position: absolute;
+    top: -50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+ }
+
+.heart:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+  0%{top:110%}
+}
+@-moz-keyframes love {
+  0%{top:110%}
+}
+@-ms-keyframes love {
+  0%{top:110%}
+}
+@keyframes love {
+  0%{top:110%}
+}
+
+
+#container {
+    min-width: 30%;
+    min-height: 30%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 5px 2px black;
+    border-radius: 20px;
+    z-index: 10;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px 10px;
+    font-family: "Poppins",sans-serif;
+}
+.fa-heart {
+    color: red;
+    font-size: 25px;
+    position: absolute;
+    animation:  heartMove linear 1;
+    top: -10vh;
+    z-index: 0;
+}
+
+@keyframes heartMove {
+    0%{
+        transform: translateY(-10vh) ;
+    }
+    100%{
+        transform: translateY(110vh) ;
+    }
+}
+#container{
+  z-index: 9999;
+}
+      </style>
+</head>
+<body>
+    <div class="none">
+        <div id="container">
+        </div>
+    </div>
+    <div class="container">
+
+        <swiper-container class="mySwiper" scrollbar-hide="true">
+            <swiper-slide>
+                <iframe src="https://giphy.com/embed/WhoNyvVjuB88HjDK0l" width="120" height="120" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <div class="text">
+                    <h2>Hii kamu yayas</h2>
+                    <div class="hearto">&#x2665;</div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <iframe src="https://giphy.com/embed/sthmCnCpfr8M8jtTQy" width="120" height="120" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <div class="text">
+                    <h2>Ini aku orang yang Menyukaimu</h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <iframe src="https://giphy.com/embed/c3Q2EdrCKAsE8z94ZF" width="120" height="120" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <div class="text">
+                    <h2>Aku cuma mau bilang</h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <iframe src="https://giphy.com/embed/IcJ6n6VJNjRNS" width="120" height="120" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <div class="text">
+                    <h2>I love You</h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="/wk.gif" width="120" height="120">
+                <div class="text">
+                    <h2>Maaf ya karena aku cemburuan</h2>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <iframe src="https://giphy.com/embed/9d3LQ6TdV2Flo8ODTU" width="120" height="120" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <div class="text">
+                    <h2>Coba klik deh Lovenya</h2>
+                    <div class="hearto  click">&#x2665;</div>
+                </div>
+            </swiper-slide>
+            
+          </swiper-container>
+    </div>
+   
+
+     <script>
+     
+
+
+Swal.fire({
+  title: 'Allo!',
+  text: 'Geser kesamping ya --->>',
+  imageUrl: 'giphy.gif',
+  imageWidth: 150,
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+})
+
+
+
+
+     const click = document.querySelector('.click')
+     const none = document.querySelector('.none')
+     click.addEventListener('click',() => {
+        
+
+
+const body = document.querySelector("body");
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "fas fa-heart";
+    heart.style.left = (Math.random() * 100)+"vw";
+    heart.style.animationDuration = (Math.random()*3)+2+"s"
+    body.appendChild(heart);
+}
+setInterval(createHeart,100);
+setInterval(function name(params) {
+    var heartArr = document.querySelectorAll(".fa-heart")
+    if (heartArr.length > 200) {
+       heartArr[0].remove()
+    }
+    //console.log(heartArr);
+},100)
+
+
+
+
+     
+        Swal.fire({
+         title: 'ini kan hari valentine yak',
+         imageUrl: 'heheh.gif',
+        imageWidth: 150,
+        imageHeight: 150,
+        imageAlt: 'Custom image',
+    }).then((result) => {
+ coek()
+ 
+})
+
+     })
+
+
+
+
+function coek(){
+    Swal.fire({
+  title: 'Kukasih Coklat Mau?',
+  imageUrl: 'coklat.gif',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Terima',
+  cancelButtonText: 'Tolak',
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+        title: 'KeWa ya',
+        imageUrl: 'coklat.gif',
+    }
+    ).then((result) => {
+        if(result.isConfirmed){
+            window.location = "https://wa.me/6285868302860?text=Aku terima ya coklatnya"
+        }
+    })
+  }else{
+    Swal.fire({
+  title: 'Harus Mau!! wlee',
+  imageUrl: 'coklat.gif',
+  confirmButtonColor: '#3085d6',
+  confirmButtonText: 'Terima',
+}).then((result) => {
+     Swal.fire({
+        title: 'KeWa ya',
+        imageUrl: 'coklat.gif',
+    }
+    ).then((result) => {
+        if(result.isConfirmed){
+            window.location = "https://wa.me/6285868302860?text=Aku terima ya coklatnya"
+        }
+    })
+})
+  }
+})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+</body>
+</html>
